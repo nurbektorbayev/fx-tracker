@@ -17,7 +17,8 @@ final class RemoveCurrencyPairCommand extends Command
 {
     public function __construct(
         private readonly RemoveCurrencyPairHandler $handler
-    ) {
+    )
+    {
         parent::__construct();
     }
 
@@ -30,8 +31,8 @@ final class RemoveCurrencyPairCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $base  = (string) $input->getArgument('base');
-        $target = (string) $input->getArgument('target');
+        $base = (string)$input->getArgument('base');
+        $target = (string)$input->getArgument('target');
 
         $this->handler->handle(
             new RemoveCurrencyPairRequest($base, $target)

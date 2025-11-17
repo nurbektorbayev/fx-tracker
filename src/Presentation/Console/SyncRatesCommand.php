@@ -13,7 +13,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 #[AsCommand(name: 'app:rates:sync', description: 'Sync exchange rates for all active pairs')]
 final class SyncRatesCommand extends Command
 {
-    public function __construct(private readonly SyncRatesHandler $handler) {
+    public function __construct(private readonly SyncRatesHandler $handler)
+    {
         parent::__construct();
     }
 

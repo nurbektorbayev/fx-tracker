@@ -10,20 +10,21 @@ final readonly class ExchangeRateResource implements \JsonSerializable
 {
     public function __construct(
         private ExchangeRate $rate,
-        private string $base,
-        private string $target,
-    ) {
+        private string       $base,
+        private string       $target,
+    )
+    {
     }
 
     public function jsonSerialize(): array
     {
         return [
-            'base'       => $this->base,
-            'target'     => $this->target,
-            'rate'       => $this->rate->getRate(),
-            'valid_at'   => $this->rate->getValidAt()->format(DATE_ATOM),
+            'base' => $this->base,
+            'target' => $this->target,
+            'rate' => $this->rate->getRate(),
+            'valid_at' => $this->rate->getValidAt()->format(DATE_ATOM),
             'fetched_at' => $this->rate->getFetchedAt()->format(DATE_ATOM),
-            'provider'   => $this->rate->getProvider(),
+            'provider' => $this->rate->getProvider(),
         ];
     }
 }

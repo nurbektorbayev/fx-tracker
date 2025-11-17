@@ -17,7 +17,8 @@ final class AddCurrencyPairCommand extends Command
 {
     public function __construct(
         private readonly AddCurrencyPairHandler $handler
-    ) {
+    )
+    {
         parent::__construct();
     }
 
@@ -30,8 +31,8 @@ final class AddCurrencyPairCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $base  = (string) $input->getArgument('base');
-        $target = (string) $input->getArgument('target');
+        $base = (string)$input->getArgument('base');
+        $target = (string)$input->getArgument('target');
 
         $directPair = $this->handler->handle(new AddCurrencyPairRequest($base, $target));
         $output->writeln(sprintf(

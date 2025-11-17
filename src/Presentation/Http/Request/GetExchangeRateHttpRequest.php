@@ -40,7 +40,8 @@ final readonly class GetExchangeRateHttpRequest
             message: 'Parameter "at" must be a valid ISO8601 datetime (e.g. 2025-11-15T10:00:00Z).'
         )]
         public ?string $at = null,
-    ) {
+    )
+    {
     }
 
     public function toUseCaseRequest(): GetExchangeRateRequest

@@ -76,8 +76,7 @@ final readonly class GetExchangeRateController
         ]
     )]
     public function __invoke(
-        #[MapQueryString]
-        GetExchangeRateHttpRequest $query
+        #[MapQueryString] GetExchangeRateHttpRequest $query
     ): JsonResponse
     {
         $useCaseRequest = $query->toUseCaseRequest();
@@ -89,9 +88,9 @@ final readonly class GetExchangeRateController
         }
 
         $resource = new ExchangeRateResource(
-            rate: $rate,
-            base: $useCaseRequest->baseCurrency,
-            target: $useCaseRequest->targetCurrency,
+            $rate,
+            $useCaseRequest->baseCurrency,
+            $useCaseRequest->targetCurrency,
         );
 
         return new JsonResponse($resource);
