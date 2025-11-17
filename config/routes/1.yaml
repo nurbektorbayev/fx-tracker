@@ -1,0 +1,4 @@
+api_v1:
+    resource: ../../src/Presentation/Http/Controller/V1/
+    type: attribute
+    prefix: /api/v1

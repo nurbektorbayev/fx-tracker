@@ -1,0 +1,56 @@
+# ==========================
+# Composer & vendor
+# ==========================
+/vendor/
+/.composer
+
+# ==========================
+# Symfony runtime files
+# ==========================
+/var/
+/var/*
+!/var/cache/.gitignore
+!/var/log/.gitignore
+
+# ==========================
+# Symfony config & secrets
+# ==========================
+/config/secrets/*/private.key
+/config/secrets/*/private.pem
+/config/secrets/*/prod.decrypt.private.php
+
+# ==========================
+# Environment files
+# ==========================
+/.env.local
+/.env.*.local
+
+# ==========================
+# Logs, caches, runtime
+# ==========================
+/*.log
+
+# ==========================
+# VCS, IDE, misc
+# ==========================
+/.git
+/.gitignore
+/.gitattributes
+/.github/
+/.idea/
+/.vscode/
+/*.swp
+*.bak
+
+# ==========================
+# 7. Docker & build artifacts
+# ==========================
+/docker/db/data
+/docker/*.md
+/docker-compose.override.yml
+
+# ==========================
+# Mac & system files
+# ==========================
+.DS_Store
+Thumbs.db
