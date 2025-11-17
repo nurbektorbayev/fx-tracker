@@ -42,4 +42,10 @@ final class InMemoryExchangeRateRepository implements ExchangeRateRepositoryInte
 
         return $candidate;
     }
+
+    public function all(): array
+    {
+        return $this->rates;
+
+    }
 }

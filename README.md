@@ -58,6 +58,11 @@ make sh
 php bin/console app:pair:add USD EUR
 ```
 
+Удаление валютной пары
+```
+php bin/console app:pair:remove USD EUR
+```
+
 Ручная синхронизация курсов
 ```
 php bin/console app:rates:sync
@@ -101,11 +106,6 @@ http://localhost:8080/api/v1/rates?base=USD&target=EUR
     "error": "Rate not found"
 }
 ```
-
-## Swagger / OpenAPI документация
-
-Swagger UI доступен по адресу:
-http://localhost:8080/api/doc
 
 ## Scheduler
 
