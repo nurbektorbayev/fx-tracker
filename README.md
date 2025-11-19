@@ -13,9 +13,9 @@
 
 ### Требования
 
-Docker 20+
-Docker Compose v2
-GNU Make
+- Docker 20+
+- Docker Compose v2
+- GNU Make
 
 ### Dev-окружение
 
@@ -113,3 +113,6 @@ http://localhost:8080/api/v1/rates?base=USD&target=EUR
 ```
 php bin/console app:rates:sync –env=prod
 ```
+
+## PS
+Swagger документация не работает, так как имеется конфликт с MapQueryString. Не придумал как пофиксить
